@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     # Sets path to additional resources wad file which is basically your scenario wad.
     # If not specified default maps will be used and it's pretty much useless... unless you want to play good old Doom.
-    game.set_doom_scenario_path("../../scenarios/basic.wad")
+    # game.set_doom_scenario_path("../../scenarios/basic.wad")
 
     # Sets map to start (scenario .wad files can contain many maps).
     game.set_doom_map("map01")
@@ -92,8 +92,15 @@ if __name__ == "__main__":
     # Sets ViZDoom mode (PLAYER, ASYNC_PLAYER, SPECTATOR, ASYNC_SPECTATOR, PLAYER mode is default)
     game.set_mode(vzd.Mode.PLAYER)
 
+    game.load_config("../../scenarios/deadly_corridor.cfg")
+
+    game.set_doom_scenario_path("../../scenarios/deadly_corridor.wad")
+
     # Enables engine output to console.
-    #game.set_console_enabled(True)
+    # game.set_console_enabled(True)
+
+    # Show the HUD, by default this is False
+    # game.set_render_hud(True)
 
     # Initialize the game. Further configuration won't take any effect from now on.
     game.init()
