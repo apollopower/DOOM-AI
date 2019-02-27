@@ -21,9 +21,9 @@ from torch.autograd import Variable
 from tqdm import trange
 
 # Q-learning settings
-learning_rate = 0.00025
+learning_rate = 0.0001
 discount_factor = 0.99
-epochs = 20
+epochs = 25
 learning_steps_per_epoch = 2000
 replay_memory_size = 10000
 
@@ -40,14 +40,14 @@ episodes_to_watch = 10
 
 model_savefile = "./model-doom.pth"
 save_model = True
-load_model = False
-skip_learning = False
+load_model = True
+skip_learning = True
 
 # Configuration file path
 # config_file_path = "../../scenarios/simpler_basic.cfg"
 # config_file_path = "../../scenarios/rocket_basic.cfg"
-# config_file_path = "../../scenarios/basic.cfg"
-config_file_path = "../../scenarios/deadly_corridor.cfg"
+config_file_path = "../../scenarios/basic.cfg"
+# config_file_path = "../../scenarios/deadly_corridor.cfg"
 
 
 # Converts and down-samples the input image
